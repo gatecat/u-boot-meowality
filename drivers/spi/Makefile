@@ -50,6 +50,7 @@ obj-$(CONFIG_PL022_SPI) += pl022_spi.o
 obj-$(CONFIG_RENESAS_RPC_SPI) += renesas_rpc_spi.o
 obj-$(CONFIG_ROCKCHIP_SPI) += rk_spi.o
 obj-$(CONFIG_SANDBOX_SPI) += sandbox_spi.o
+obj-$(CONFIG_SUN6I_SPI) += sun6i_spi.o
 obj-$(CONFIG_SPI_SIFIVE) += spi-sifive.o
 obj-$(CONFIG_SPI_SUNXI) += spi-sunxi.o
 obj-$(CONFIG_SH_SPI) += sh_spi.o
