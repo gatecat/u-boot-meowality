@@ -7,8 +7,6 @@
 #ifndef __CONFIG_H
 #define __CONFIG_H
 
-#define CONFIG_SUNXI_USB_PHYS 1
-
 /*
  * Include common sunxi configuration where most the settings are
  */
