@@ -28,6 +28,9 @@ DECLARE_GLOBAL_DATA_PTR;
 
 #define TIMER_NUM		0	/* we use timer 0 */
 
+/* forward declaration */
+ulong get_timer_masked(void);
+
 /* read the 32-bit timer */
 static ulong read_timer(void)
 {
