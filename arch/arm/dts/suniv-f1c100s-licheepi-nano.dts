@@ -5,6 +5,7 @@
 
 /dts-v1/;
 #include "suniv-f1c100s.dtsi"
+#include "sunxi-common-regulators.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
 
@@ -39,6 +40,13 @@
 		reg = <0>;
 		spi-max-frequency = <40000000>;
 	};
+};
+
+&mmc0 {
+	vmmc-supply = <&reg_vcc3v3>;
+	bus-width = <4>;
+	broken-cd;
+	status = "okay";
 };
 
 &uart0 {
