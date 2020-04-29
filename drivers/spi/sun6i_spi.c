@@ -246,7 +246,7 @@ static int sunxi_spi_xfer(struct udevice *dev, unsigned int bitlen,
 	/* Reset FIFO */
 	writel(FCR_RX_FIFO_RST | FCR_TX_FIFO_RST, &spi->FCR);
 	/* Wait until the FIFO reset autoclears */
-	ret = wait_for_bit(dev->name, &spi->FCR,
+	ret = wait_for_bit_32(&spi->FCR,
 			   FCR_RX_FIFO_RST | FCR_TX_FIFO_RST,
 			   false, 10, true);
 	if (ret < 0) {
@@ -282,7 +282,7 @@ static int sunxi_spi_xfer(struct udevice *dev, unsigned int bitlen,
 		/* Start transfer ... */
 		setbits_le32(&spi->TCR, TCR_XCH);
 		/* ... and wait until it finshes. */
-		ret = wait_for_bit(dev->name, &spi->TCR, TCR_XCH,
+		ret = wait_for_bit_32(&spi->TCR, TCR_XCH,
 				   false, timeout_ms, true);
 		if (ret < 0) {
 			printf("%s: stuck in XCH for %ld ms\n",
