@@ -30,6 +30,7 @@
 *.su
 *.swp
 *.tab.[ch]
+*.map
 
 # Build tree
 /build-*
